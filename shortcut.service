@@ -1,5 +1,5 @@
 [Unit]
-Description=Shortcut Breadboard Launcher
+Description=Shortcut Launcher with breadboard
 Requires=network-online.target
 After=network-online.target
 
