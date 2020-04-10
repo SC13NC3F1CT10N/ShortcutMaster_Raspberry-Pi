@@ -17,8 +17,8 @@ GPIO.setup(8, GPIO.OUT, initial = GPIO.LOW) # Setup pin 14 as an input pin and s
 # Edit these to change command (FUNCTION = "COMMAND:STRING")
 func1 = "lxterminal -t ShortcutMaster"
 func2 = "minecraft-pi"
-func3 = "vivaldi"
-func4 = "shutdown -h now"
+func3 = "chromium-browser %U"
+func4 = "pcmanfm"
 
 def wunp(): # Create wunp (wait until not pushed) function
     while GPIO.input(10) == GPIO.HIGH:
@@ -31,6 +31,7 @@ print("Ready")
 ## MAIN ##
 stop = False
 while stop == False: # Run until stop = True
+    # If button (1 to 4) is pushed, execute set command then stop the script
     if GPIO.input(10) == GPIO.HIGH:
         print("Execute: " + func1)
         system(func1)
