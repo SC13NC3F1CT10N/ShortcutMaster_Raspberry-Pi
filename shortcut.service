@@ -1,0 +1,15 @@
+[Unit]
+Description=Shortcut Breadboard Launcher
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python3 shortcutmaster.py
+WorkingDirectory=/home/pi/ShortcutMaster_Raspberry-pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=network-online.target
