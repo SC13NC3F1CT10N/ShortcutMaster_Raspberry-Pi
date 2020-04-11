@@ -14,11 +14,11 @@ GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Setup pin 16 as an input p
 GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Setup pin 18 as an input pin and set initial value to be pulled low (off) 
 GPIO.setup(8, GPIO.OUT, initial = GPIO.LOW) # Setup pin 14 as an input pin and set initial value to be pulled low (off) 
 
-# Edit these to change command (FUNCTION = "COMMAND:STRING")
-func1 = "lxterminal -t ShortcutMaster"
-func2 = "minecraft-pi"
-func3 = "chromium-browser %U"
-func4 = "pcmanfm"
+# Edit these to change command <FUNCTION = "COMMAND:STRING">
+func1 = "lxterminal -t ShortcutMaster" # Terminal
+func2 = "/usr/bin/vlc --started-from-file %U" # VLC Media Player
+func3 = "chromium-browser %U" # Chromium Web Browser
+func4 = "pcmanfm" # File manager
 
 def wunp(): # Create wunp (wait until not pushed) function
     while GPIO.input(10) == GPIO.HIGH:
